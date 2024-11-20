@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/toaster"
 import { Routes, Route } from 'react-router-dom';
 import './globals.css';
 import SigninForm from './_auth/forms/signinForm';
@@ -5,6 +6,8 @@ import SignupForm from './_auth/forms/signupForm';
 import { Home } from './_root/pages';
 import AuthLayout from './_auth/AuthLayout';
 import RootLayout from './_root/RootLayout';
+
+
 function App() {
   return (
     <main className='flex h-screen'>
@@ -22,6 +25,8 @@ function App() {
             </Route>
             <Route index element={<Home />} />
          </Routes>
+
+         <Toaster />
     </main>
   )
 }
